@@ -12,6 +12,7 @@
   "dependencies": {
     "babel-preset-stage-3": "^6.24.1",
     "backpack-core": "^0.7.0",
+    "cors": "^2.8.4",
     "express": "^4.16.3",
     "mongoose": "^5.2.9",
     "pug": "^2.0.3"
