@@ -1,12 +1,22 @@
 import express from 'express'
 import router from './routes/form'
 import volleyball from 'volleyball'
+import mongoose from 'mongoose'
+// mongoose config
+mongoose.connect('mongodb://localhost/form_db');
+
+const db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open', function() {
+  console.log('On est la !!!')
+});
 
 const app = express()
 const PORT = 9876;
 app.set('view engine', 'pug')
 app.set('views', __dirname + '/views')
 app.use(volleyball)
+
 
 app.get("/", (req, res) => {
   res.send("On est là !!!!!")
