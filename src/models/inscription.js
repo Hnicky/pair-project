@@ -2,7 +2,7 @@ import mongoose from 'mongoose'
 
 const Schema = mongoose.Schema
 
-const formSchema = new Schema({
+const FormSchema = new Schema({
   email: String,
   password: String,
   adress: String,
@@ -10,9 +10,9 @@ const formSchema = new Schema({
   city: String,
   state: String,
   zip: Number,
-  checkbox: Boolean,
+  // checkbox: Boolean,
 })
 
-const formSchema = mongoose.model("formSchema", formSchema)
+const formSchema = mongoose.model("formSchema", FormSchema)
 
 export default formSchema

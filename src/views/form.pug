@@ -1,35 +1,23 @@
 extends layout
 block content
   h1 inscription
-  form
-  .form-row
+  form(method="post", action="/inscription/inscrit" )
     .form-group.col-md-6
-      label(for='inputEmail4') Email
-      input#inputEmail4.form-control(placeholder='Email', type='email')
+      label(for='email') Email
+      input#inputEmail4.form-control(placeholder='Email', name="email", type='email')
     .form-group.col-md-6
-      label(for='inputPassword4') Password
-      input#inputPassword4.form-control(placeholder='Password', type='password')
-  .form-group
-    label(for='inputAddress') Address
-    input#inputAddress.form-control(placeholder='1234 Main St', type='text')
-  .form-group
-    label(for='inputAddress2') Address 2
-    input#inputAddress2.form-control(placeholder='Apartment, studio, or floor', type='text')
-  .form-row
-    .form-group.col-md-6
-      label(for='inputCity') City
+      label(for='password') Password
+      input#inputPassword4.form-control(placeholder='Password',name="password", type='password')
+      label(for='address') Address
+      input#inputAddress.form-control(placeholder='1234 Main St',name='address' type='text')
+      label(for='address2') Address 2
+      input#inputAddress2.form-control(placeholder='Apartment, studio, or floor', name='address2',type='text')
+      label(for='city') City
       input#inputCity.form-control(type='text')
-    .form-group.col-md-4
-      label(for='inputState') State
+      label(for='state') State
       select#inputState.form-control
-        option(selected='') Choose...
+        option(selected='',name='state') Choose...
         option ...
-    .form-group.col-md-2
-      label(for='inputZip') Zip
-      input#inputZip.form-control(type='text')
-  .form-group
-    .form-check
-      input#gridCheck.form-check-input(type='checkbox')
-      label.form-check-label(for='gridCheck')
-        | Check me out
-  button.btn.btn-primary(type='submit') Envoyer
+      label(for='zip') Zip
+      input#inputZip.form-control(type='text',name='zip')
+      button.btn.btn-primary(type='submit') envoyer
