@@ -22,9 +22,11 @@ router.post('/inscrit', (req, res) => {
 router.get('/list', (req,res)=>{
   formSchema.find({}, (err, found)=>{
     if(err) res.send(err)
-    res.send(found)
+    res.render('list', {found})
   })
 })
+
+
 
 
 export default router
